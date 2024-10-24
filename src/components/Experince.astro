@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Application UI code in Tailwind CSS",
+        description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+        link: "#"
+    },
+    {
+        date: "Febrero 2",
+        title: "Application UI code in Tailwind CSS",
+        description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+
+    },
+    {
+        date: "Enero 15",
+        title: "Application UI code in Tailwind CSS",
+        description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+
+    },
+]
+---
+
+<ol class="relative ml-3 border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(expe => (
+                <li class="mb-10 ms-4">
+                    <ExperienceItem {...expe}/>
+                </li>
+        ))
+    }
+</ol>

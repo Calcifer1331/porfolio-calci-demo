@@ -2,14 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import GithubIcon from "../components/icons/GitHubIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+import Experince from "../components/Experince.astro";
+import SectionConteiner from "../components/SectionConteiner.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Porfolio de Calcifer - Desarrollador y Programador FullStack",
+        description="El programador mas rapido de tota italia!! Fiiiaaaauuuhhh!">
     <main>
-        <section class="w-full mx-auto lg:w-[740px] py-44">
-            <img class="rounded-full w-12 h-12 mb-2" src="../../public/tesla.avif" alt="photo">
-            <h1 class="text-white text-5xl font-bold
+        <SectionConteiner class="py-44 pb-24">
+            <img class="rounded-full size-12 mb-2" src="../../public/tesla.avif" alt="photo">
+            <h1 class="text-white text-2xl lg:text-5xl font-bold
       flex flex-row gap-x-4 pb-4">
                 Hey!, soy Calcifer
                 <div class="flex justify-center items-center">
@@ -24,17 +30,28 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
                 Especializado en hacer aplicaciones únicas
             </h2>
 
-            <ul>
-                <li>
-                    <SocialPill>
-                        <LinkedIn class="w-6 h-6"}/>
-                        LinkedIn
-                    </SocialPill>
-                </li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </section>
+
+            <nav class="mt-6 flex gap-x-4">
+                <SocialPill href="https://linkedin.com">
+                    <LinkedInIcon class="size-6" }/>
+                    LinkedIn
+                </SocialPill>
+                <SocialPill href="https://github.com/Calcifer1331">
+                    <GithubIcon class="size-6"/>
+                    GitHub
+                </SocialPill>
+                <SocialPill href="mailto:Calcifer1331@hotmail.com">
+                    <MailIcon class="size-6"/>
+                    Calcifer1331@hotmail.com
+                </SocialPill>
+            </nav>
+        </SectionConteiner>
+        <SectionConteiner id="experiencia">
+            <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+                <BriefCase class="size-8"/>
+                Experiencia Laboral
+            </h2>
+            <Experince/>
+        </SectionConteiner>
     </main>
 </Layout>
